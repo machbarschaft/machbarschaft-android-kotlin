@@ -1,5 +1,6 @@
 package jetzt.machbarschaft.android.view.splash
 
+import jetzt.machbarschaft.android.BuildConfig
 import jetzt.machbarschaft.android.service.ApiConstants
 import jetzt.machbarschaft.android.service.base.NullOrEmptyConverterFactory
 import jetzt.machbarschaft.android.service.testapi.datasource.TestDataApi
@@ -55,7 +56,7 @@ class SplashPresenter: SplashContract.Presenter {
     }
 
     override fun unbindView() {
-        TODO("Not yet implemented")
+        splashView = null
     }
 
     override fun getAllUsers() {
