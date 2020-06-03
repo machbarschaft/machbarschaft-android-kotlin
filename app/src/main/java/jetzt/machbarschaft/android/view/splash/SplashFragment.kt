@@ -1,59 +1,60 @@
 package jetzt.machbarschaft.android.view.splash
 
+import android.content.Context
+import android.content.Intent
+import android.content.SharedPreferences
 import android.os.Bundle
-import androidx.fragment.app.Fragment
+import android.os.Handler
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Button
-import androidx.navigation.fragment.findNavController
+import androidx.fragment.app.Fragment
+import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.auth.FirebaseUser
 import jetzt.machbarschaft.android.R
-import jetzt.machbarschaft.android.service.testapi.data.UserResponse
-import kotlinx.android.synthetic.main.fragment_first.*
+import java.io.File
 
 /**
  * A simple [Fragment] subclass as the default destination in the navigation.
  */
-class SplashFragment : Fragment(), SplashContract.View {
+class SplashFragment : Fragment() {
 
-    private var presenter: SplashContract.Presenter? = null
+    private val myHandler = Handler()
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_first, container, false)
+        return inflater.inflate(R.layout.fragment_splash, container, false)
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        presenter = SplashPresenter()
-        presenter?.bindView(this)
-
-        view.findViewById<Button>(R.id.button_load_users).setOnClickListener {
-            presenter?.getAllUsers()
-        }
-
-        view.findViewById<Button>(R.id.button_next_fragment).setOnClickListener {
-            findNavController().navigate(R.id.action_FirstFragment_to_SecondFragment)
+        val user: FirebaseUser? = FirebaseAuth.getInstance().currentUser
+        if (user == null) {
+            myHandler.postDelayed({ this.startLogin() }, 1200)
+        } else {
+            myHandler.postDelayed({ this.startApp() }, 1200)
         }
     }
 
-    override fun showLoadingDialog() {
-        loading_progress_bar.visibility = View.VISIBLE
+    private fun fixGoogleMapBug() {
+        val googleBug: SharedPreferences =
+            context?.getSharedPreferences("google_bug", Context.MODE_PRIVATE)!!
+        if (!googleBug.contains("fixed")) {
+            val corruptedZoomTables = File(context?.filesDir, "ZoomTables.data")
+            corruptedZoomTables.delete()
+            googleBug.edit().putBoolean("fixed", true).apply()
+        }
     }
 
-    override fun hideLoadingDialog() {
-        loading_progress_bar.visibility = View.GONE
+    private fun startApp() {
+//        this.startActivity(Intent(this, HomeActivity::class.java))
     }
 
-    override fun showUsers(user: List<UserResponse>) {
-        textview_response.text = "loaded ${user.size} users"
-    }
-
-    override fun showError() {
-        textview_response.text = "error on loading"
+    private fun startLogin() {
+//        this.startActivity(Intent(this, LoginActivity::class.java))
     }
 }

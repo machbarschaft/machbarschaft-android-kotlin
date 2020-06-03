@@ -15,6 +15,14 @@ buildscript {
         retrofitGsonVersion = "2.6.2"
         rxAndroidVersion = "2.1.1"
 
+        firebaseAnalyticsVersion = "17.3.0"
+        firebaseAuthVersion = "19.3.0"
+        firebaseFunctionsVersion = "19.0.2"
+        firebaseFirestoreVersion = "21.4.2"
+        firebaseMessagingVersion = "20.1.4"
+
+        crashLyticsVersion = "2.10.1"
+
         //testing dependency versions
         jUnitVersion = "4.13"
         androidxJUnitVersion = "1.1.1"
