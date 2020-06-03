@@ -1,8 +1,13 @@
 package jetzt.machbarschaft.android.view.splash
 
+import io.reactivex.android.schedulers.AndroidSchedulers
+import io.reactivex.disposables.CompositeDisposable
+import io.reactivex.schedulers.Schedulers
 import jetzt.machbarschaft.android.BuildConfig
 import jetzt.machbarschaft.android.service.ApiConstants
 import jetzt.machbarschaft.android.service.base.NullOrEmptyConverterFactory
+import jetzt.machbarschaft.android.service.testapi.data.TestBody
+import jetzt.machbarschaft.android.service.testapi.data.UserResponse
 import jetzt.machbarschaft.android.service.testapi.datasource.TestDataApi
 import jetzt.machbarschaft.android.service.testapi.datasource.TestRemoteDataSource
 import okhttp3.OkHttpClient
@@ -17,8 +22,9 @@ import java.util.concurrent.TimeUnit
  */
 class SplashPresenter: SplashContract.Presenter {
 
-    private var splashView: SplashContract.View? = null
+    private var view: SplashContract.View? = null
 
+    private val disposables = CompositeDisposable()
     private val testDataRemoteDataSource: TestRemoteDataSource
 
     init {
@@ -52,16 +58,54 @@ class SplashPresenter: SplashContract.Presenter {
     }
 
     override fun bindView(view: SplashContract.View) {
-        splashView = view
+        this.view = view
     }
 
     override fun unbindView() {
-        splashView = null
+        view = null
     }
 
+    /**
+     * Makes request to remote data source and handles callback
+     */
     override fun getAllUsers() {
-        TODO("Not yet implemented")
+
+        view?.showLoadingDialog()
+
+        disposables.add(
+            testDataRemoteDataSource
+                .getAllUsers(
+                    1
+                )
+                .subscribeOn(Schedulers.io())
+                .observeOn(AndroidSchedulers.mainThread())
+                .subscribe(
+                    this::onRequestRegistrationDataSuccessful,
+                    this::onRequestRegistrationDataFailure
+                )
+        )
+
     }
 
+    /**
+     * callback if request is successful
+     */
+    private fun onRequestRegistrationDataSuccessful(response: List<UserResponse>) {
+        println("successful")
+        view?.hideLoadingDialog()
+
+        view?.showUsers(response)
+
+    }
+
+    /**
+     * callback if rest request fails
+     */
+    private fun onRequestRegistrationDataFailure(throwable: Throwable) {
+        throwable.printStackTrace()
+        view?.hideLoadingDialog()
+
+        view?.showError()
+    }
 
 }

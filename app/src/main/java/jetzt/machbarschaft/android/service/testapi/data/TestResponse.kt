@@ -6,15 +6,16 @@ import kotlinx.android.parcel.Parcelize
 
 @Parcelize
 data class TestResponse(
-    @SerializedName("id") val id: String?,
-    @SerializedName("name") val name: String?,
-    @SerializedName("email") val email: String?,
-    @SerializedName("username") val username: String?
+    @SerializedName("page") val page: Int?,
+    @SerializedName("per_page") val perPage: Int?,
+    @SerializedName("total") val total: Int?,
+    @SerializedName("total_pages") val totalPages: Int?,
+    @SerializedName("data") val data: List<UserResponse>?
 ) : Parcelable {
 
     companion object {
         val EMPTY = TestResponse(
-            "", "", "", ""
+            -1, -1, -1, -1, null
         )
     }
 

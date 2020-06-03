@@ -13,6 +13,7 @@ buildscript {
         retrofitVersion = "2.4.0"
         retrofitAdapterVersion = "2.6.2"
         retrofitGsonVersion = "2.6.2"
+        rxAndroidVersion = "2.1.1"
 
         //testing dependency versions
         jUnitVersion = "4.13"

@@ -1,9 +1,13 @@
 package jetzt.machbarschaft.android.view.splash
 
+import jetzt.machbarschaft.android.service.testapi.data.UserResponse
+
 class SplashContract {
 
     interface View {
-        fun showUser()
+        fun showLoadingDialog()
+        fun hideLoadingDialog()
+        fun showUsers(user: List<UserResponse>)
         fun showError()
     }
 
