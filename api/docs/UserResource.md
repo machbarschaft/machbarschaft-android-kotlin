@@ -1,29 +1,30 @@
 
-# UserResource
+# UserResourceModel
 
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**city** | **String** |  | 
-**createdAt** | [**Date**](Date.md) |  | 
-**email** | **String** |  |  [optional]
-**firstName** | **String** |  |  [optional]
-**id** | [**UUID**](UUID.md) |  |  [optional]
-**lastName** | **String** |  |  [optional]
-**location** | [**GeoPointResource**](GeoPointResource.md) |  | 
-**locationGeoHash** | **String** |  | 
-**phone** | **String** |  | 
-**source** | [**SourceEnum**](#SourceEnum) |  | 
-**street** | **String** |  |  [optional]
-**streetNo** | **String** |  |  [optional]
-**updatedAt** | [**Date**](Date.md) |  | 
-**zipCode** | **String** |  | 
+**city** | **kotlin.String** |  | 
+**createdAt** | [**java.time.OffsetDateTime**](java.time.OffsetDateTime.md) |  | 
+**location** | [**GeoPointResourceModel**](GeoPointResourceModel.md) |  | 
+**locationGeoHash** | **kotlin.String** |  | 
+**phone** | **kotlin.String** |  | 
+**source** | [**inline**](#SourceEnum) |  | 
+**updatedAt** | [**java.time.OffsetDateTime**](java.time.OffsetDateTime.md) |  | 
+**zipCode** | **kotlin.String** |  | 
+**email** | **kotlin.String** |  |  [optional]
+**firstName** | **kotlin.String** |  |  [optional]
+**id** | [**java.util.UUID**](java.util.UUID.md) |  |  [optional]
+**lastName** | **kotlin.String** |  |  [optional]
+**street** | **kotlin.String** |  |  [optional]
+**streetNo** | **kotlin.String** |  |  [optional]
 
 
 <a name="SourceEnum"></a>
-## Enum: SourceEnum
+## Enum: source
 Name | Value
 ---- | -----
+source | HOTLINE, APP
 
 
 

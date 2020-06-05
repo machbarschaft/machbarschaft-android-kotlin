@@ -1,10 +1,10 @@
 
-# PatchUserAdminDto
+# PatchUserAdminDtoModel
 
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**role** | **String** |  |  [optional]
+**role** | **kotlin.String** |  |  [optional]
 
 
 

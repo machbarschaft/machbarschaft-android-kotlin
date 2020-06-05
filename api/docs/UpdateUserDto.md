@@ -1,25 +1,26 @@
 
-# UpdateUserDto
+# UpdateUserDtoModel
 
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**firstName** | **String** |  | 
-**lastName** | **String** |  | 
-**street** | **String** |  | 
-**streetNo** | **String** |  | 
-**zipCode** | **String** |  | 
-**city** | **String** |  | 
-**email** | **String** |  | 
-**location** | [**GeoPointResource1**](GeoPointResource1.md) |  | 
-**phone** | **String** |  | 
-**source** | [**SourceEnum**](#SourceEnum) |  | 
+**firstName** | **kotlin.String** |  | 
+**lastName** | **kotlin.String** |  | 
+**street** | **kotlin.String** |  | 
+**streetNo** | **kotlin.String** |  | 
+**zipCode** | **kotlin.String** |  | 
+**city** | **kotlin.String** |  | 
+**email** | **kotlin.String** |  | 
+**location** | [**GeoPointResource1Model**](GeoPointResource1Model.md) |  | 
+**phone** | **kotlin.String** |  | 
+**source** | [**inline**](#SourceEnum) |  | 
 
 
 <a name="SourceEnum"></a>
-## Enum: SourceEnum
+## Enum: source
 Name | Value
 ---- | -----
+source | HOTLINE, APP
 
 
 

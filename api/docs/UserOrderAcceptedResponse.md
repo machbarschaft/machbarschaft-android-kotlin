@@ -1,11 +1,11 @@
 
-# UserOrderAcceptedResponse
+# UserOrderAcceptedResponseModel
 
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**consumer** | [**UserResource**](UserResource.md) |  | 
-**order** | [**OrderResource**](OrderResource.md) |  | 
+**consumer** | [**UserResourceModel**](UserResourceModel.md) |  | 
+**order** | [**OrderResourceModel**](OrderResourceModel.md) |  | 
 
 
 

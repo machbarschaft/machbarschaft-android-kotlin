@@ -1,20 +1,21 @@
 
-# CreateOrderDto
+# CreateOrderDtoModel
 
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**hint** | **String** |  |  [optional]
-**maxPrice** | **Integer** |  |  [optional]
-**userId** | **Integer** |  |  [optional]
-**items** | [**List&lt;CreateOrderItemDto&gt;**](CreateOrderItemDto.md) |  |  [optional]
-**source** | [**SourceEnum**](#SourceEnum) |  | 
+**source** | [**inline**](#SourceEnum) |  | 
+**hint** | **kotlin.String** |  |  [optional]
+**maxPrice** | **kotlin.Int** |  |  [optional]
+**userId** | **kotlin.Int** |  |  [optional]
+**items** | [**kotlin.Array&lt;CreateOrderItemDtoModel&gt;**](CreateOrderItemDtoModel.md) |  |  [optional]
 
 
 <a name="SourceEnum"></a>
-## Enum: SourceEnum
+## Enum: source
 Name | Value
 ---- | -----
+source | HOTLINE, APP
 
 
 

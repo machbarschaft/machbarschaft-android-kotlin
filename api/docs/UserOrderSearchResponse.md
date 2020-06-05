@@ -1,11 +1,11 @@
 
-# UserOrderSearchResponse
+# UserOrderSearchResponseModel
 
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**order** | [**OrderResource**](OrderResource.md) |  | 
-**user** | [**AnonymizedUserResource**](AnonymizedUserResource.md) |  | 
+**order** | [**OrderResourceModel**](OrderResourceModel.md) |  | 
+**user** | [**AnonymizedUserResourceModel**](AnonymizedUserResourceModel.md) |  | 
 
 
 

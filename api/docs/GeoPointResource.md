@@ -1,11 +1,11 @@
 
-# GeoPointResource
+# GeoPointResourceModel
 
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**latitude** | **Double** |  | 
-**longitude** | **Double** |  | 
+**latitude** | **kotlin.Double** |  | 
+**longitude** | **kotlin.Double** |  | 
 
 
 

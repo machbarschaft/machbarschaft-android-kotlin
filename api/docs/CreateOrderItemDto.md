@@ -1,10 +1,10 @@
 
-# CreateOrderItemDto
+# CreateOrderItemDtoModel
 
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**description** | **String** |  | 
+**description** | **kotlin.String** |  | 
 
 
 

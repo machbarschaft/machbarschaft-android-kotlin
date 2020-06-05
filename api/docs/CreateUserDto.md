@@ -1,25 +1,26 @@
 
-# CreateUserDto
+# CreateUserDtoModel
 
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**firstName** | **String** |  |  [optional]
-**lastName** | **String** |  |  [optional]
-**street** | **String** |  |  [optional]
-**streetNo** | **String** |  |  [optional]
-**zipCode** | **String** |  | 
-**city** | **String** |  | 
-**email** | **String** |  |  [optional]
-**location** | [**GeoPointResource1**](GeoPointResource1.md) |  | 
-**phone** | **String** |  | 
-**source** | [**SourceEnum**](#SourceEnum) |  | 
+**zipCode** | **kotlin.String** |  | 
+**city** | **kotlin.String** |  | 
+**location** | [**GeoPointResource1Model**](GeoPointResource1Model.md) |  | 
+**phone** | **kotlin.String** |  | 
+**source** | [**inline**](#SourceEnum) |  | 
+**firstName** | **kotlin.String** |  |  [optional]
+**lastName** | **kotlin.String** |  |  [optional]
+**street** | **kotlin.String** |  |  [optional]
+**streetNo** | **kotlin.String** |  |  [optional]
+**email** | **kotlin.String** |  |  [optional]
 
 
 <a name="SourceEnum"></a>
-## Enum: SourceEnum
+## Enum: source
 Name | Value
 ---- | -----
+source | HOTLINE, APP
 
 
 

@@ -1,142 +1,80 @@
-# swagger-android-client
+# jetzt.machbarschaft.android - Kotlin client library for Api Documentation
 
-## Requirements
+## Requires
 
-Building the API client library requires [Maven](https://maven.apache.org/) to be installed.
+* Kotlin 1.3.41
+* Gradle 4.9
 
-## Installation
+## Build
 
-To install the API client library to your local Maven repository, simply execute:
-
-```shell
-mvn install
-```
-
-To deploy it to a remote Maven repository instead, configure the settings of the repository and execute:
-
-```shell
-mvn deploy
-```
-
-Refer to the [official documentation](https://maven.apache.org/plugins/maven-deploy-plugin/usage.html) for more information.
-
-### Maven users
-
-Add this dependency to your project's POM:
-
-```xml
-<dependency>
-    <groupId>io.swagger</groupId>
-    <artifactId>swagger-android-client</artifactId>
-    <version>1.0.0</version>
-    <scope>compile</scope>
-</dependency>
-```
-
-### Gradle users
-
-Add this dependency to your project's build file:
-
-```groovy
-compile "io.swagger:swagger-android-client:1.0.0"
-```
-
-### Others
-
-At first generate the JAR by executing:
-
-    mvn package
-
-Then manually install the following JARs:
-
-* target/swagger-android-client-1.0.0.jar
-* target/lib/*.jar
-
-## Getting Started
-
-Please follow the [installation](#installation) instruction and execute the following Java code:
-
-```java
-
-import io.swagger.client.api.AdminrestserviceApi;
-
-public class AdminrestserviceApiExample {
-
-    public static void main(String[] args) {
-        AdminrestserviceApi apiInstance = new AdminrestserviceApi();
-        String userId = "userId_example"; // String | userId
-        PatchUserAdminDto userPatch = new PatchUserAdminDto(); // PatchUserAdminDto | userPatch
-        Integer rawStatusCode = 56; // Integer | 
-        String statusCode = "statusCode_example"; // String | 
-        try {
-            MonoUserResource result = apiInstance.updateUserAdminUsingPATCH(userId, userPatch, rawStatusCode, statusCode);
-            System.out.println(result);
-        } catch (ApiException e) {
-            System.err.println("Exception when calling AdminrestserviceApi#updateUserAdminUsingPATCH");
-            e.printStackTrace();
-        }
-    }
-}
+First, create the gradle wrapper script:
 
 ```
+gradle wrapper
+```
 
+Then, run:
+
+```
+./gradlew check assemble
+```
+
+This runs all tests and packages the library.
+
+## Features/Implementation Notes
+
+* Supports JSON inputs/outputs, File inputs, and Form inputs.
+* Supports collection formats for query parameters: csv, tsv, ssv, pipes.
+* Some Kotlin and Java types are fully qualified to avoid conflicts with types defined in OpenAPI definitions.
+* Implementation of ApiClient is intended to reduce method counts, specifically to benefit Android targets.
+
+<a name="documentation-for-api-endpoints"></a>
 ## Documentation for API Endpoints
 
-All URIs are relative to *https://service-api-ng.nightly.staging.colivery.app/*
+All URIs are relative to *http://service-api-ng.nightly.staging.colivery.app*
 
 Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
-*AdminrestserviceApi* | [**updateUserAdminUsingPATCH**](docs/AdminrestserviceApi.md#updateUserAdminUsingPATCH) | **PATCH** /v1/admin/users/{userId} | updateUserAdmin
-*LocationrestserviceApi* | [**geoCodeAddressUsingGET**](docs/LocationrestserviceApi.md#geoCodeAddressUsingGET) | **GET** /v1/location | geoCodeAddress
-*OrderrestserviceApi* | [**abortOrderDeliveryUsingPATCH**](docs/OrderrestserviceApi.md#abortOrderDeliveryUsingPATCH) | **PATCH** /v1/order/{orderId}/abort | abortOrderDelivery
-*OrderrestserviceApi* | [**acceptOrderUsingPATCH**](docs/OrderrestserviceApi.md#acceptOrderUsingPATCH) | **PATCH** /v1/order/{orderId}/accept | acceptOrder
-*OrderrestserviceApi* | [**cancelOrderUsingPATCH**](docs/OrderrestserviceApi.md#cancelOrderUsingPATCH) | **PATCH** /v1/order/{orderId}/cancel | cancelOrder
-*OrderrestserviceApi* | [**createOrderUsingPOST**](docs/OrderrestserviceApi.md#createOrderUsingPOST) | **POST** /v1/order | createOrder
-*OrderrestserviceApi* | [**deliverOrderUsingPATCH**](docs/OrderrestserviceApi.md#deliverOrderUsingPATCH) | **PATCH** /v1/order/{orderId}/deliver | deliverOrder
-*OrderrestserviceApi* | [**searchOrdersInRangeUsingGET**](docs/OrderrestserviceApi.md#searchOrdersInRangeUsingGET) | **GET** /v1/order | searchOrdersInRange
-*UserrestserviceApi* | [**createUserUsingPOST**](docs/UserrestserviceApi.md#createUserUsingPOST) | **POST** /v1/user | createUser
-*UserrestserviceApi* | [**deleteOwnUserUsingDELETE**](docs/UserrestserviceApi.md#deleteOwnUserUsingDELETE) | **DELETE** /v1/user | deleteOwnUser
-*UserrestserviceApi* | [**getDriverOrdersUsingGET**](docs/UserrestserviceApi.md#getDriverOrdersUsingGET) | **GET** /v1/user/orders-accepted | getDriverOrders
-*UserrestserviceApi* | [**getOrdersForUserUsingGET**](docs/UserrestserviceApi.md#getOrdersForUserUsingGET) | **GET** /v1/user/orders | getOrdersForUser
-*UserrestserviceApi* | [**getUserUsingGET**](docs/UserrestserviceApi.md#getUserUsingGET) | **GET** /v1/user | getUser
-*UserrestserviceApi* | [**updateOwnUserUsingPUT**](docs/UserrestserviceApi.md#updateOwnUserUsingPUT) | **PUT** /v1/user | updateOwnUser
+*AdminRestServiceApi* | [**updateUserAdminUsingPATCH**](docs/AdminRestServiceApi.md#updateuseradminusingpatch) | **PATCH** /v1/admin/users/{userId} | updateUserAdmin
+*LocationRestServiceApi* | [**geoCodeAddressUsingGET**](docs/LocationRestServiceApi.md#geocodeaddressusingget) | **GET** /v1/location | geoCodeAddress
+*OrderRestServiceApi* | [**abortOrderDeliveryUsingPATCH**](docs/OrderRestServiceApi.md#abortorderdeliveryusingpatch) | **PATCH** /v1/order/{orderId}/abort | abortOrderDelivery
+*OrderRestServiceApi* | [**acceptOrderUsingPATCH**](docs/OrderRestServiceApi.md#acceptorderusingpatch) | **PATCH** /v1/order/{orderId}/accept | acceptOrder
+*OrderRestServiceApi* | [**cancelOrderUsingPATCH**](docs/OrderRestServiceApi.md#cancelorderusingpatch) | **PATCH** /v1/order/{orderId}/cancel | cancelOrder
+*OrderRestServiceApi* | [**createOrderUsingPOST**](docs/OrderRestServiceApi.md#createorderusingpost) | **POST** /v1/order | createOrder
+*OrderRestServiceApi* | [**deliverOrderUsingPATCH**](docs/OrderRestServiceApi.md#deliverorderusingpatch) | **PATCH** /v1/order/{orderId}/deliver | deliverOrder
+*OrderRestServiceApi* | [**searchOrdersInRangeUsingGET**](docs/OrderRestServiceApi.md#searchordersinrangeusingget) | **GET** /v1/order | searchOrdersInRange
+*UserRestServiceApi* | [**createUserUsingPOST**](docs/UserRestServiceApi.md#createuserusingpost) | **POST** /v1/user | createUser
+*UserRestServiceApi* | [**deleteOwnUserUsingDELETE**](docs/UserRestServiceApi.md#deleteownuserusingdelete) | **DELETE** /v1/user | deleteOwnUser
+*UserRestServiceApi* | [**getDriverOrdersUsingGET**](docs/UserRestServiceApi.md#getdriverordersusingget) | **GET** /v1/user/orders-accepted | getDriverOrders
+*UserRestServiceApi* | [**getOrdersForUserUsingGET**](docs/UserRestServiceApi.md#getordersforuserusingget) | **GET** /v1/user/orders | getOrdersForUser
+*UserRestServiceApi* | [**getUserUsingGET**](docs/UserRestServiceApi.md#getuserusingget) | **GET** /v1/user | getUser
+*UserRestServiceApi* | [**updateOwnUserUsingPUT**](docs/UserRestServiceApi.md#updateownuserusingput) | **PUT** /v1/user | updateOwnUser
 
 
+<a name="documentation-for-models"></a>
 ## Documentation for Models
 
- - [AnonymizedUserResource](docs/AnonymizedUserResource.md)
- - [CreateOrderDto](docs/CreateOrderDto.md)
- - [CreateOrderItemDto](docs/CreateOrderItemDto.md)
- - [CreateUserDto](docs/CreateUserDto.md)
- - [FluxUserOrderAcceptedResponse](docs/FluxUserOrderAcceptedResponse.md)
- - [FluxUserOrderResponse](docs/FluxUserOrderResponse.md)
- - [FluxUserOrderSearchResponse](docs/FluxUserOrderSearchResponse.md)
- - [GeoPointResource](docs/GeoPointResource.md)
- - [GeoPointResource1](docs/GeoPointResource1.md)
- - [LocationResource](docs/LocationResource.md)
- - [MonoLocationResource](docs/MonoLocationResource.md)
- - [MonoOrderResource](docs/MonoOrderResource.md)
- - [MonoUserResource](docs/MonoUserResource.md)
- - [OrderItemResource](docs/OrderItemResource.md)
- - [OrderResource](docs/OrderResource.md)
- - [PatchUserAdminDto](docs/PatchUserAdminDto.md)
- - [UpdateUserDto](docs/UpdateUserDto.md)
- - [UserOrderAcceptedResponse](docs/UserOrderAcceptedResponse.md)
- - [UserOrderResponse](docs/UserOrderResponse.md)
- - [UserOrderSearchResponse](docs/UserOrderSearchResponse.md)
- - [UserResource](docs/UserResource.md)
+ - [jetzt.machbarschaft.android.api.model.AnonymizedUserResourceModel](docs/AnonymizedUserResourceModel.md)
+ - [jetzt.machbarschaft.android.api.model.CreateOrderDtoModel](docs/CreateOrderDtoModel.md)
+ - [jetzt.machbarschaft.android.api.model.CreateOrderItemDtoModel](docs/CreateOrderItemDtoModel.md)
+ - [jetzt.machbarschaft.android.api.model.CreateUserDtoModel](docs/CreateUserDtoModel.md)
+ - [jetzt.machbarschaft.android.api.model.FluxUserOrderAcceptedResponseModel](docs/FluxUserOrderAcceptedResponseModel.md)
+ - [jetzt.machbarschaft.android.api.model.FluxUserOrderResponseModel](docs/FluxUserOrderResponseModel.md)
+ - [jetzt.machbarschaft.android.api.model.FluxUserOrderSearchResponseModel](docs/FluxUserOrderSearchResponseModel.md)
+ - [jetzt.machbarschaft.android.api.model.GeoPointResource1Model](docs/GeoPointResource1Model.md)
+ - [jetzt.machbarschaft.android.api.model.GeoPointResourceModel](docs/GeoPointResourceModel.md)
+ - [jetzt.machbarschaft.android.api.model.LocationResourceModel](docs/LocationResourceModel.md)
+ - [jetzt.machbarschaft.android.api.model.OrderItemResourceModel](docs/OrderItemResourceModel.md)
+ - [jetzt.machbarschaft.android.api.model.OrderResourceModel](docs/OrderResourceModel.md)
+ - [jetzt.machbarschaft.android.api.model.PatchUserAdminDtoModel](docs/PatchUserAdminDtoModel.md)
+ - [jetzt.machbarschaft.android.api.model.UpdateUserDtoModel](docs/UpdateUserDtoModel.md)
+ - [jetzt.machbarschaft.android.api.model.UserOrderAcceptedResponseModel](docs/UserOrderAcceptedResponseModel.md)
+ - [jetzt.machbarschaft.android.api.model.UserOrderResponseModel](docs/UserOrderResponseModel.md)
+ - [jetzt.machbarschaft.android.api.model.UserOrderSearchResponseModel](docs/UserOrderSearchResponseModel.md)
+ - [jetzt.machbarschaft.android.api.model.UserResourceModel](docs/UserResourceModel.md)
 
 
+<a name="documentation-for-authorization"></a>
 ## Documentation for Authorization
 
 All endpoints do not require authorization.
-Authentication schemes defined for the API:
-
-## Recommendation
-
-It's recommended to create an instance of `ApiClient` per thread in a multithreaded environment to avoid any potential issue.
-
-## Author
-
-
-

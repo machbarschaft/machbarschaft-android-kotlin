@@ -1,11 +1,11 @@
 
-# UserOrderResponse
+# UserOrderResponseModel
 
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**driver** | [**UserResource**](UserResource.md) |  |  [optional]
-**order** | [**OrderResource**](OrderResource.md) |  | 
+**order** | [**OrderResourceModel**](OrderResourceModel.md) |  | 
+**driver** | [**UserResourceModel**](UserResourceModel.md) |  |  [optional]
 
 
 
