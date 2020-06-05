@@ -9,6 +9,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import androidx.navigation.fragment.findNavController
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.FirebaseUser
 import jetzt.machbarschaft.android.R
@@ -31,6 +32,12 @@ class SplashFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+
+
+    }
+
+    override fun onResume() {
+        super.onResume()
 
         val user: FirebaseUser? = FirebaseAuth.getInstance().currentUser
         if (user == null) {
@@ -55,6 +62,6 @@ class SplashFragment : Fragment() {
     }
 
     private fun startLogin() {
-//        this.startActivity(Intent(this, LoginActivity::class.java))
+        findNavController().navigate(R.id.action_splash_to_login)
     }
 }

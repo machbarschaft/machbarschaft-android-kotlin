@@ -42,7 +42,7 @@ class LoginFragment : Fragment() {
         val introSlidesPager: ViewPager = intro_slides_pager
         val introSlidesIndicator: TabLayout = intro_slides_indicator
 
-        introSlidesPager.adapter = CustomPagerAdapter(context!!)
+        introSlidesPager.adapter = CustomPagerAdapter(activity!!.supportFragmentManager)
         introSlidesIndicator.setupWithViewPager(introSlidesPager, true)
 
         // Get UI elements

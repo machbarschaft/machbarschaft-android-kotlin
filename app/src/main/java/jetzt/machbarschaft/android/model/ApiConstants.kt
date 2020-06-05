@@ -1,4 +1,4 @@
-package jetzt.machbarschaft.android.service
+package jetzt.machbarschaft.android.model
 
 /**
  * Constants representing the remote server API URLs.

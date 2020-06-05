@@ -1,6 +1,6 @@
 package jetzt.machbarschaft.android.view.splash
 
-import jetzt.machbarschaft.android.service.testapi.data.UserResponse
+import jetzt.machbarschaft.android.model.testapi.data.UserResponse
 
 class SplashContract {
 

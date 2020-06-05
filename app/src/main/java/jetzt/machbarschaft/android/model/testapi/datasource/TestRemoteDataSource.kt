@@ -1,8 +1,7 @@
-package jetzt.machbarschaft.android.service.testapi.datasource
+package jetzt.machbarschaft.android.model.testapi.datasource
 
 import io.reactivex.Single
-import jetzt.machbarschaft.android.service.testapi.data.TestBody
-import jetzt.machbarschaft.android.service.testapi.data.UserResponse
+import jetzt.machbarschaft.android.model.testapi.data.UserResponse
 
 /**
  * Implementation of [TestDataSource] that uses the remote server as data source.

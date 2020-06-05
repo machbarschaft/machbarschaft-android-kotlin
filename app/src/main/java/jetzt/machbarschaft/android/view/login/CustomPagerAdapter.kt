@@ -1,54 +1,30 @@
 package jetzt.machbarschaft.android.view.login
 
-import android.content.Context
-import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.TextView
-import androidx.appcompat.widget.AppCompatImageView
-import androidx.viewpager.widget.PagerAdapter
-import jetzt.machbarschaft.android.R
+import androidx.fragment.app.Fragment
+import androidx.fragment.app.FragmentManager
+import androidx.fragment.app.FragmentPagerAdapter
+import jetzt.machbarschaft.android.view.login.intro_slides.IntroFragment
+import jetzt.machbarschaft.android.view.login.intro_slides.IntroFragment2
+import jetzt.machbarschaft.android.view.login.intro_slides.IntroFragment3
+import jetzt.machbarschaft.android.view.login.intro_slides.IntroFragment4
 
-class CustomPagerAdapter(private val context: Context): PagerAdapter() {
+class CustomPagerAdapter(fragmentManager: FragmentManager): FragmentPagerAdapter(fragmentManager, BEHAVIOR_RESUME_ONLY_CURRENT_FRAGMENT) {
 
-    override fun instantiateItem(container: ViewGroup, position: Int): Any {
-        val inflater = LayoutInflater.from(context)
-        val layout =
-            inflater.inflate(R.layout.fragment_intro, container, false) as ViewGroup
-        container.addView(layout)
-
-        val imageViewIntro = container.findViewById<AppCompatImageView>(R.id.imageview_intro)
-        val textViewIntro = container.findViewById<TextView>(R.id.textview_intro)
-
-        when(position) {
-            0 -> {
-                imageViewIntro.setImageDrawable(context.getDrawable(R.drawable.ic_swipe_right))
-                textViewIntro.text = context.resources.getString(R.string.intro_1_text)
-            }
-            1 -> {
-                imageViewIntro.setImageDrawable(context.getDrawable(R.drawable.search_location))
-                textViewIntro.text = context.resources.getString(R.string.intro_1_text)
-            }
-            2 -> {
-                imageViewIntro.setImageDrawable(context.getDrawable(R.drawable.ic_phone_in_talk_black_24dp))
-                textViewIntro.text = context.resources.getString(R.string.intro_1_text)
-            }
-            3 -> {
-                imageViewIntro.setImageDrawable(context.getDrawable(R.drawable.supermarket))
-                textViewIntro.text = context.resources.getString(R.string.intro_1_text)
-            }
+    override fun getItem(position: Int): Fragment {
+        var fragment: Fragment? = null
+        when (position){
+            0 -> fragment = IntroFragment()
+            1 -> fragment = IntroFragment2()
+            2 -> fragment = IntroFragment3()
+            3 -> fragment = IntroFragment4()
         }
-
-        return layout
-    }
-
-    override fun isViewFromObject(view: View, `object`: Any): Boolean {
-        return view === `object`
+        return fragment!!
     }
 
     override fun getCount(): Int {
         return 4
     }
-
 
 }

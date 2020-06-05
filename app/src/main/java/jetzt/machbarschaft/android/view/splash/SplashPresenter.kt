@@ -4,12 +4,11 @@ import io.reactivex.android.schedulers.AndroidSchedulers
 import io.reactivex.disposables.CompositeDisposable
 import io.reactivex.schedulers.Schedulers
 import jetzt.machbarschaft.android.BuildConfig
-import jetzt.machbarschaft.android.service.ApiConstants
-import jetzt.machbarschaft.android.service.base.NullOrEmptyConverterFactory
-import jetzt.machbarschaft.android.service.testapi.data.TestBody
-import jetzt.machbarschaft.android.service.testapi.data.UserResponse
-import jetzt.machbarschaft.android.service.testapi.datasource.TestDataApi
-import jetzt.machbarschaft.android.service.testapi.datasource.TestRemoteDataSource
+import jetzt.machbarschaft.android.model.ApiConstants
+import jetzt.machbarschaft.android.model.base.NullOrEmptyConverterFactory
+import jetzt.machbarschaft.android.model.testapi.data.UserResponse
+import jetzt.machbarschaft.android.model.testapi.datasource.TestDataApi
+import jetzt.machbarschaft.android.model.testapi.datasource.TestRemoteDataSource
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
 import retrofit2.Retrofit

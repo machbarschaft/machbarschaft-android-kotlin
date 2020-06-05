@@ -1,6 +1,8 @@
 apply plugin: 'com.android.application'
 apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-android-extensions'
+apply plugin: 'com.google.gms.google-services'
+apply plugin: 'io.fabric'
 
 android {
     compileSdkVersion 29
@@ -39,6 +41,10 @@ dependencies {
     implementation "com.google.android.material:material:$rootProject.materialDesignVersion"
     implementation "androidx.constraintlayout:constraintlayout:$rootProject.constraintLayoutVersion"
 
+    //Google Play Services
+    implementation "com.google.android.gms:play-services-maps:$rootProject.googlePlayServicesVersion"
+    implementation "com.google.android.gms:play-services-location:$rootProject.googlePlayServicesVersion"
+
     // Firebase
     implementation "com.google.firebase:firebase-analytics:$rootProject.firebaseAnalyticsVersion"
     implementation "com.google.firebase:firebase-auth:$rootProject.firebaseAuthVersion"
@@ -59,6 +65,7 @@ dependencies {
     implementation "com.squareup.retrofit2:converter-gson:$rootProject.retrofitGsonVersion"
     implementation "com.squareup.okhttp3:logging-interceptor:$rootProject.okHttpLoggingVersion"
     implementation "io.reactivex.rxjava2:rxandroid:$rootProject.rxAndroidVersion"
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
 
     testImplementation "junit:junit:$rootProject.jUnitVersion"
     androidTestImplementation "androidx.test.ext:junit:$rootProject.androidxJUnitVersion"

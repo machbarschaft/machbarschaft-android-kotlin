@@ -15,6 +15,8 @@ buildscript {
         retrofitGsonVersion = "2.6.2"
         rxAndroidVersion = "2.1.1"
 
+        googlePlayServicesVersion = "17.0.0"
+
         firebaseAnalyticsVersion = "17.3.0"
         firebaseAuthVersion = "19.3.0"
         firebaseFunctionsVersion = "19.0.2"
@@ -33,11 +35,16 @@ buildscript {
     repositories {
         google()
         jcenter()
+        maven { url 'https://jitpack.io' }
+        maven {
+            url 'https://maven.fabric.io/public'
+        }
     }
     dependencies {
         classpath "com.android.tools.build:gradle:4.0.0"
         classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
-
+        classpath 'com.google.gms:google-services:4.3.3'
+        classpath 'io.fabric.tools:gradle:1.31.2'
         // NOTE: Do not place your application dependencies here; they belong
         // in the individual module build.gradle files
     }

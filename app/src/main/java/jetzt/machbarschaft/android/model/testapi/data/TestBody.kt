@@ -1,4 +1,4 @@
-package jetzt.machbarschaft.android.service.testapi.data
+package jetzt.machbarschaft.android.model.testapi.data
 
 import android.os.Parcelable
 import com.google.gson.annotations.SerializedName

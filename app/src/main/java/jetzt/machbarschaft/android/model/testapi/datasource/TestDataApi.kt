@@ -1,9 +1,8 @@
-package jetzt.machbarschaft.android.service.testapi.datasource
+package jetzt.machbarschaft.android.model.testapi.datasource
 
 import io.reactivex.Single
-import jetzt.machbarschaft.android.service.ApiConstants
-import jetzt.machbarschaft.android.service.testapi.data.TestResponse
-import jetzt.machbarschaft.android.service.testapi.data.UserResponse
+import jetzt.machbarschaft.android.model.ApiConstants
+import jetzt.machbarschaft.android.model.testapi.data.TestResponse
 import retrofit2.Response
 import retrofit2.http.GET
 import retrofit2.http.Query
