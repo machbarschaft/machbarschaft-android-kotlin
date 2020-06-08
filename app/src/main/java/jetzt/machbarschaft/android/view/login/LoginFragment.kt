@@ -1,11 +1,11 @@
 package jetzt.machbarschaft.android.view.login
 
-import android.content.Intent
 import android.os.Bundle
 import android.util.Patterns
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.ArrayAdapter
 import android.widget.AutoCompleteTextView
 import android.widget.Button
 import android.widget.EditText
@@ -25,7 +25,7 @@ class LoginFragment : Fragment() {
 
     private var phoneNumberTextView: EditText? = null
     private var loginButton: Button? = null
-    private val countryCodeTextView: AutoCompleteTextView? = null
+    private var countryCodeTextView: AutoCompleteTextView? = null
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -46,8 +46,6 @@ class LoginFragment : Fragment() {
         introSlidesIndicator.setupWithViewPager(introSlidesPager, true)
 
         // Get UI elements
-
-        // Get UI elements
         phoneNumberTextView = input_phone_number
         loginButton = btn_login
 
@@ -55,6 +53,39 @@ class LoginFragment : Fragment() {
 
         // Button click handlers
         loginButton?.setOnClickListener { login() }
+
+        val countryCodes =
+            resources.getStringArray(R.array.country_codes)
+        val countryCodeAdapter = context?.let {
+            ArrayAdapter(
+                it,
+                R.layout.login_phone_dropdown_menu_popup_item,
+                countryCodes
+            )
+        }
+        countryCodeTextView = filled_exposed_dropdown_country_code_login
+        countryCodeTextView!!.setText(countryCodes[0], false)
+        countryCodeTextView!!.setAdapter(countryCodeAdapter)
+
+        // Fill in phone number if given
+
+        // Fill in phone number if given
+        val phoneNumber: String? =
+            activity!!.intent.getStringExtra(EXTRA_PHONE_NUMBER)
+
+        if (phoneNumber != null) {
+            for (countryCode in countryCodes) {
+                if (!phoneNumber.startsWith(countryCode)) {
+                    continue
+                }
+                val phoneNumberSecondPart = phoneNumber.substring(countryCode.length)
+
+                // Set data in views
+                countryCodeTextView!!.setText(countryCode)
+                phoneNumberTextView!!.setText(phoneNumberSecondPart)
+                break
+            }
+        }
     }
 
     private fun login() {
