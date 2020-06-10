@@ -11,8 +11,8 @@ import jetzt.machbarschaft.android.service.base.NullOrEmptyConverterFactory
 import jetzt.machbarschaft.android.service.testapi.data.CreateUserBody
 import jetzt.machbarschaft.android.service.testapi.data.CreateUserResponse
 import jetzt.machbarschaft.android.service.testapi.data.GetUserResponse
-import jetzt.machbarschaft.android.service.testapi.datasource.TestDataApi
-import jetzt.machbarschaft.android.service.testapi.datasource.TestRemoteDataSource
+import jetzt.machbarschaft.android.service.testapi.datasource.UserDataApi
+import jetzt.machbarschaft.android.service.testapi.datasource.UserRemoteDataSource
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
 import retrofit2.Retrofit
@@ -29,7 +29,7 @@ class SplashPresenter : SplashContract.Presenter {
     private var view: SplashContract.View? = null
 
     private val disposables = CompositeDisposable()
-    private val testDataRemoteDataSource: TestRemoteDataSource
+    private val testDataRemoteDataSource: UserRemoteDataSource
 
     private var mAuth: FirebaseAuth
     private lateinit var headerToken: String
@@ -60,9 +60,9 @@ class SplashPresenter : SplashContract.Presenter {
             .addCallAdapterFactory(RxJava2CallAdapterFactory.create())
             .build()
 
-        val testDataApi = retrofit.create(TestDataApi::class.java)
+        val testDataApi = retrofit.create(UserDataApi::class.java)
 
-        testDataRemoteDataSource = TestRemoteDataSource(testDataApi)
+        testDataRemoteDataSource = UserRemoteDataSource(testDataApi)
 
         mAuth = FirebaseAuth.getInstance()
     }
