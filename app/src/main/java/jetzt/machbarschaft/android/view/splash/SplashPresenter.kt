@@ -110,7 +110,7 @@ class SplashPresenter : SplashContract.Presenter {
                 .observeOn(AndroidSchedulers.mainThread())
                 .subscribe(
                     this::onGetUserSuccessful,
-                    this::onRequestRegistrationDataFailure
+                    this::onRequestGetUserDataFailure
                 )
         )
     }
@@ -127,9 +127,18 @@ class SplashPresenter : SplashContract.Presenter {
     /**
      * callback if rest request fails
      */
-    private fun onRequestRegistrationDataFailure(throwable: Throwable) {
+    private fun onRequestGetUserDataFailure(throwable: Throwable) {
         throwable.printStackTrace()
         view?.hideLoadingDialog()
+        view?.showError()
+    }
+
+    /**
+     * callback if rest request fails
+     */
+    private fun onRequestRegistrationDataFailure(throwable: Throwable) {
+        throwable.printStackTrace()
+        getUser(headerToken)
         view?.showError()
     }
 
