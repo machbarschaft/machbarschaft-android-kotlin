@@ -5,7 +5,7 @@ import com.squareup.moshi.Json
 
 /**
  * This class was created by hand and needs to be replaced with the automatic created class from OPEN API Code Generator. :)
- * TODO replace
+ * TODO replace and add missing values
  */
 data class GetUserResponse(
     @Json(name = "centerOfLocationGeoHash")
