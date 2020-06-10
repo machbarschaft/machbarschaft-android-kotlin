@@ -8,7 +8,6 @@ import android.view.ViewGroup
 import android.widget.Button
 import androidx.navigation.fragment.findNavController
 import jetzt.machbarschaft.android.R
-import jetzt.machbarschaft.android.service.testapi.data.UserResponse
 import kotlinx.android.synthetic.main.fragment_first.*
 
 /**
@@ -33,7 +32,7 @@ class SplashFragment : Fragment(), SplashContract.View {
         presenter?.bindView(this)
 
         view.findViewById<Button>(R.id.button_load_users).setOnClickListener {
-            presenter?.getAllUsers()
+            presenter?.registerFirebase("test@test.de", "123456")
         }
 
         view.findViewById<Button>(R.id.button_next_fragment).setOnClickListener {
@@ -49,11 +48,12 @@ class SplashFragment : Fragment(), SplashContract.View {
         loading_progress_bar.visibility = View.GONE
     }
 
-    override fun showUsers(user: List<UserResponse>) {
-        textview_response.text = "loaded ${user.size} users"
-    }
-
     override fun showError() {
         textview_response.text = "error on loading"
+    }
+
+    override fun showToken(userToken: String) {
+        textview_response.text = "loaded ${userToken} users"
+
     }
 }
