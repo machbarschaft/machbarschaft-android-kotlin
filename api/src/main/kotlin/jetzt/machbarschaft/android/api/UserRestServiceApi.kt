@@ -47,6 +47,9 @@ interface UserRestServiceApi {
         @Query("principal") principal: kotlin.Any
     ): Call<kotlin.Any>
 
+    @GET("/v1/user/search")
+    fun searchUserUsingGET(@Query("phoneNumber") phoneNumber: kotlin.String): Call<kotlin.Any>
+
     @PUT("/v1/user")
     fun updateOwnUserUsingPUT(
         @Body updateUserDto: UpdateUserDtoModel,

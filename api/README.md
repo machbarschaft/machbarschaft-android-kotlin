@@ -48,6 +48,7 @@ Class | Method | HTTP request | Description
 *UserRestServiceApi* | [**getDriverOrdersUsingGET**](docs/UserRestServiceApi.md#getdriverordersusingget) | **GET** /v1/user/orders-accepted | getDriverOrders
 *UserRestServiceApi* | [**getOrdersForUserUsingGET**](docs/UserRestServiceApi.md#getordersforuserusingget) | **GET** /v1/user/orders | getOrdersForUser
 *UserRestServiceApi* | [**getUserUsingGET**](docs/UserRestServiceApi.md#getuserusingget) | **GET** /v1/user | getUser
+*UserRestServiceApi* | [**searchUserUsingGET**](docs/UserRestServiceApi.md#searchuserusingget) | **GET** /v1/user/search | searchUser
 *UserRestServiceApi* | [**updateOwnUserUsingPUT**](docs/UserRestServiceApi.md#updateownuserusingput) | **PUT** /v1/user | updateOwnUser
 
 

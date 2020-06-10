@@ -9,6 +9,7 @@ Method | HTTP request | Description
 [**getDriverOrdersUsingGET**](UserRestServiceApi.md#getDriverOrdersUsingGET) | **GET** /v1/user/orders-accepted | getDriverOrders
 [**getOrdersForUserUsingGET**](UserRestServiceApi.md#getOrdersForUserUsingGET) | **GET** /v1/user/orders | getOrdersForUser
 [**getUserUsingGET**](UserRestServiceApi.md#getUserUsingGET) | **GET** /v1/user | getUser
+[**searchUserUsingGET**](UserRestServiceApi.md#searchUserUsingGET) | **GET** /v1/user/search | searchUser
 [**updateOwnUserUsingPUT**](UserRestServiceApi.md#updateOwnUserUsingPUT) | **PUT** /v1/user | updateOwnUser
 
 
@@ -254,6 +255,51 @@ Name | Type | Description  | Notes
  **credentials** | [**kotlin.Any**](.md)|  | [optional]
  **details** | [**kotlin.Any**](.md)|  | [optional]
  **principal** | [**kotlin.Any**](.md)|  | [optional]
+
+### Return type
+
+[**kotlin.Any**](kotlin.Any.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+<a name="searchUserUsingGET"></a>
+# **searchUserUsingGET**
+> kotlin.Any searchUserUsingGET(phoneNumber)
+
+searchUser
+
+### Example
+```kotlin
+// Import classes:
+//import jetzt.machbarschaft.android.infrastructure.*
+//import jetzt.machbarschaft.android.api.model.*
+
+val apiInstance = UserRestServiceApi()
+val phoneNumber : kotlin.String = phoneNumber_example // kotlin.String | phoneNumber
+try {
+    val result : kotlin.Any = apiInstance.searchUserUsingGET(phoneNumber)
+    println(result)
+} catch (e: ClientException) {
+    println("4xx response calling UserRestServiceApi#searchUserUsingGET")
+    e.printStackTrace()
+} catch (e: ServerException) {
+    println("5xx response calling UserRestServiceApi#searchUserUsingGET")
+    e.printStackTrace()
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **phoneNumber** | **kotlin.String**| phoneNumber |
 
 ### Return type
 
