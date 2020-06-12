@@ -105,6 +105,8 @@ class LoginFragment : Fragment() {
 //                .putExtra(VerifyPhoneActivity.EXTRA_PHONE_NUMBER, phoneNumber)
 //        )
 //        finishAfterTransition()
+
+
     }
 
     /**
