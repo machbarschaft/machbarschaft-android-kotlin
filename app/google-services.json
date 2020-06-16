@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "645242671020",
+    "firebase_url": "https://colivery-app.firebaseio.com",
+    "project_id": "colivery-app",
+    "storage_bucket": "colivery-app.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:645242671020:android:52180983a42ae010597409",
+        "android_client_info": {
+          "package_name": "jetzt.machbarschaft.android"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "645242671020-s82aphj1mpjs74dgapp41fj1a504jrjd.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCWSmcNhsyW4jcrfEeEQ37cLcI-YeUJNrg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "645242671020-s82aphj1mpjs74dgapp41fj1a504jrjd.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
