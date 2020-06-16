@@ -1,6 +1,9 @@
 package jetzt.machbarschaft.android.service.testapi.data
 
+import android.os.Parcelable
+import com.google.gson.annotations.SerializedName
 import com.squareup.moshi.Json
+import kotlinx.android.parcel.Parcelize
 
 
 /**
@@ -37,12 +40,8 @@ data class GetUserResponse(
     }
 }
 
-
-class GeoPoint {
-    constructor(longitude: Double?, latitude: Double?) {
-        this.longitude = longitude
-        this.latitude = latitude
-    }
-    var longitude: Double? = null
-    var latitude: Double? = null
-}
+@Parcelize
+data class GeoPoint(
+    @SerializedName("longitude") val longitude: Double?,
+    @SerializedName("latitude") val latitude: Double?
+): Parcelable
