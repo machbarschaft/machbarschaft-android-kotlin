@@ -119,7 +119,7 @@ class SplashPresenter : SplashContract.Presenter {
      * callback if request is successful
      */
     private fun onGetUserSuccessful(response: GetUserResponse) {
-        println("successful")
+        Log.d("onGetUser","successful")
         view?.hideLoadingDialog()
         Log.wtf("GetUserResponse", response.toString())
     }
@@ -147,8 +147,7 @@ class SplashPresenter : SplashContract.Presenter {
      * callback if the registration request is successful
      */
     private fun onRequestRegistrationDataSuccessful(response: CreateUserResponse) {
-        println("successful")
-        println(response)
+        Log.d("onRequestRegData","successful")
         view?.hideLoadingDialog()
         getUser(headerToken)
     }
@@ -175,7 +174,7 @@ class SplashPresenter : SplashContract.Presenter {
             }else{
                 //need to auth maybe put email and password in a var
                 // and call authFirebase() here again in case something went wrong
-                println(task.result.toString())
+                Log.d("getUser", task.result.toString())
             }
         }
     }
