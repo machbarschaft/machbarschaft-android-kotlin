@@ -1,6 +1,7 @@
 package jetzt.machbarschaft.android.service.testapi.datasource
 
 import io.reactivex.Single
+import jetzt.machbarschaft.android.model.testapi.datasource.UserDataApi
 import jetzt.machbarschaft.android.service.testapi.data.*
 
 /**
