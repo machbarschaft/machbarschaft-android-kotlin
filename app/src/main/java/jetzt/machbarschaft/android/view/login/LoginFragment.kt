@@ -42,7 +42,7 @@ class LoginFragment : Fragment() {
         val introSlidesPager: ViewPager = intro_slides_pager
         val introSlidesIndicator: TabLayout = intro_slides_indicator
 
-        introSlidesPager.adapter = CustomPagerAdapter(activity!!.supportFragmentManager)
+        introSlidesPager.adapter = CustomPagerAdapter(requireActivity().supportFragmentManager)
         introSlidesIndicator.setupWithViewPager(introSlidesPager, true)
 
         // Get UI elements
@@ -70,10 +70,8 @@ class LoginFragment : Fragment() {
         countryCodeTextView!!.setAdapter(countryCodeAdapter)
 */
         // Fill in phone number if given
-
-        // Fill in phone number if given
         val phoneNumber: String? =
-            activity!!.intent.getStringExtra(EXTRA_PHONE_NUMBER)
+            requireActivity().intent.getStringExtra(EXTRA_PHONE_NUMBER)
 
         if (phoneNumber != null) {
             for (countryCode in countryCodes) {

@@ -1,20 +1,21 @@
 package jetzt.machbarschaft.android.view.splash
 
-import jetzt.machbarschaft.android.model.testapi.data.UserResponse
-
 class SplashContract {
 
     interface View {
         fun showLoadingDialog()
         fun hideLoadingDialog()
-        fun showUsers(user: List<UserResponse>)
         fun showError()
+        fun showToken(userToken: String)
     }
 
     interface Presenter {
         fun bindView(view: SplashContract.View)
         fun unbindView()
-        fun getAllUsers()
+        fun authFirebase(email: String, password: String)
+        fun registerFirebase(email: String, password: String)
+        fun setToken()
+        fun getUser()
     }
 
 }

@@ -1,148 +1,35 @@
 {
   "project_info": {
-    "project_number": "285249743751",
-    "firebase_url": "https://einanrufhilft-95d29.firebaseio.com",
-    "project_id": "einanrufhilft-95d29",
-    "storage_bucket": "einanrufhilft-95d29.appspot.com"
+    "project_number": "645242671020",
+    "firebase_url": "https://colivery-app.firebaseio.com",
+    "project_id": "colivery-app",
+    "storage_bucket": "colivery-app.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:285249743751:android:f9b2980a665b4cf5b58122",
+        "mobilesdk_app_id": "1:645242671020:android:52180983a42ae010597409",
         "android_client_info": {
           "package_name": "jetzt.machbarschaft.android"
         }
       },
       "oauth_client": [
         {
-          "client_id": "285249743751-nbivicib7uds97c0vheghaf8llrsvil5.apps.googleusercontent.com",
-          "client_type": 1,
-          "android_info": {
-            "package_name": "jetzt.machbarschaft.android",
-            "certificate_hash": "bf2103eb12e486ac2f54b00fa6ea4f016ca0c954"
-          }
-        },
-        {
-          "client_id": "285249743751-r1emggsjng9664ljl3du9q6uu0jjosgv.apps.googleusercontent.com",
-          "client_type": 1,
-          "android_info": {
-            "package_name": "jetzt.machbarschaft.android",
-            "certificate_hash": "0aa897585c900b7a03436dc7fe56719a505bf3b1"
-          }
-        },
-        {
-          "client_id": "285249743751-ork9ab2gocif15sf19ack8btcf7dateo.apps.googleusercontent.com",
-          "client_type": 1,
-          "android_info": {
-            "package_name": "jetzt.machbarschaft.android",
-            "certificate_hash": "a11b135a8b706f84e6081e9dd562c8ad9cf6ced7"
-          }
-        },
-        {
-          "client_id": "285249743751-6k6a7spbsu6go3q3aprc7454i415mc1n.apps.googleusercontent.com",
-          "client_type": 1,
-          "android_info": {
-            "package_name": "jetzt.machbarschaft.android",
-            "certificate_hash": "7d8de7cdc9488a9d9f569769cd543b225c00d77a"
-          }
-        },
-        {
-          "client_id": "285249743751-vb0dnm5afk7lf0c3941m0n01pbu9hplj.apps.googleusercontent.com",
+          "client_id": "645242671020-s82aphj1mpjs74dgapp41fj1a504jrjd.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyCl5J8tnPtuOEHSdRnIDm19Or1d0kO7QOc"
-        },
-        {
-          "current_key": "AIzaSyCKjkB9jnn7m_DGXB0Xu6YdTkTtG2tUNRA"
+          "current_key": "AIzaSyCWSmcNhsyW4jcrfEeEQ37cLcI-YeUJNrg"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "285249743751-vb0dnm5afk7lf0c3941m0n01pbu9hplj.apps.googleusercontent.com",
+              "client_id": "645242671020-s82aphj1mpjs74dgapp41fj1a504jrjd.apps.googleusercontent.com",
               "client_type": 3
-            },
-            {
-              "client_id": "285249743751-nlrh1klj49euqmobdcr6cbldarvbl8sb.apps.googleusercontent.com",
-              "client_type": 2,
-              "ios_info": {
-                "bundle_id": "de.machbarschaft-ios.Machbarschaft"
-              }
-            }
-          ]
-        }
-      }
-    },
-    {
-      "client_info": {
-        "mobilesdk_app_id": "1:285249743751:android:8d4f622e90817a3eb58122",
-        "android_client_info": {
-          "package_name": "jetzt.machbarschaft.android.debug"
-        }
-      },
-      "oauth_client": [
-        {
-          "client_id": "285249743751-rs88448j68uev1qqi2ig034tud81c3r8.apps.googleusercontent.com",
-          "client_type": 1,
-          "android_info": {
-            "package_name": "jetzt.machbarschaft.android.debug",
-            "certificate_hash": "bf2103eb12e486ac2f54b00fa6ea4f016ca0c954"
-          }
-        },
-        {
-          "client_id": "285249743751-nruogv3koc4fd73v599hlkhd138tpkmd.apps.googleusercontent.com",
-          "client_type": 1,
-          "android_info": {
-            "package_name": "jetzt.machbarschaft.android.debug",
-            "certificate_hash": "0aa897585c900b7a03436dc7fe56719a505bf3b1"
-          }
-        },
-        {
-          "client_id": "285249743751-8l1bdj90rsnj0fkmk1v1v5fclrp594d8.apps.googleusercontent.com",
-          "client_type": 1,
-          "android_info": {
-            "package_name": "jetzt.machbarschaft.android.debug",
-            "certificate_hash": "65e107a1fd893e75e13ab0d64bf5e397ad13e7f6"
-          }
-        },
-        {
-          "client_id": "285249743751-4nqk8asm0p27f47l0unonpacd63g7r90.apps.googleusercontent.com",
-          "client_type": 1,
-          "android_info": {
-            "package_name": "jetzt.machbarschaft.android.debug",
-            "certificate_hash": "a11b135a8b706f84e6081e9dd562c8ad9cf6ced7"
-          }
-        },
-        {
-          "client_id": "285249743751-vb0dnm5afk7lf0c3941m0n01pbu9hplj.apps.googleusercontent.com",
-          "client_type": 3
-        }
-      ],
-      "api_key": [
-        {
-          "current_key": "AIzaSyCl5J8tnPtuOEHSdRnIDm19Or1d0kO7QOc"
-        },
-        {
-          "current_key": "AIzaSyCKjkB9jnn7m_DGXB0Xu6YdTkTtG2tUNRA"
-        }
-      ],
-      "services": {
-        "appinvite_service": {
-          "other_platform_oauth_client": [
-            {
-              "client_id": "285249743751-vb0dnm5afk7lf0c3941m0n01pbu9hplj.apps.googleusercontent.com",
-              "client_type": 3
-            },
-            {
-              "client_id": "285249743751-nlrh1klj49euqmobdcr6cbldarvbl8sb.apps.googleusercontent.com",
-              "client_type": 2,
-              "ios_info": {
-                "bundle_id": "de.machbarschaft-ios.Machbarschaft"
-              }
             }
           ]
         }
