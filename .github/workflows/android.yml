@@ -2,9 +2,8 @@ name: Android CI
 
 on:
   push:
-    branches: [ master, dev ]
-  pull_request:
-    branches: [ master, dev ]
+    branches: [ master, dev ] 
+  pull_request: {}
 
 jobs:
   build:
@@ -21,3 +20,8 @@ jobs:
       run: chmod +x gradlew
     - name: Build with Gradle
       run: ./gradlew --stacktrace --no-daemon --console plain build
+    - name: Save lint results
+      uses: actions/upload-artifact@v2
+      with:
+        name: lint-result
+        path: app/build/reports/
