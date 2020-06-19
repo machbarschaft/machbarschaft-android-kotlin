@@ -21,3 +21,8 @@ jobs:
       run: chmod +x gradlew
     - name: Build with Gradle
       run: ./gradlew --stacktrace --no-daemon --console plain build
+    - name: Save lint results
+      uses: actions/upload-artifacts@v2
+      with:
+        name: lint-result
+        path: app/build/reports/
