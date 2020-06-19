@@ -93,6 +93,4 @@
     <string name="report_problem_describtion">You can cancel the order or report a problem.</string>
     <string name="image_desc_moving_person">Image of a person moving</string>
     <string name="successfull_auth">Verification was successful!</string>
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>
