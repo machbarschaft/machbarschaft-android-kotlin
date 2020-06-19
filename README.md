@@ -1,6 +1,6 @@
 # Machbarschaft
 
-![Android Build](https://github.com/machbarschaft/machbarschaft-android/workflows/Android%20CI/badge.svg)
+![Android Build](https://github.com/machbarschaft/machbarschaft-android-kotlin/workflows/Android%20CI/badge.svg)
 
 ## Android Application
 
