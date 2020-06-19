@@ -1,4 +1,4 @@
-package jetzt.machbarschaft.android.service.testapi.data
+package jetzt.machbarschaft.android.model.testapi.data
 
 import com.google.gson.annotations.SerializedName
 
@@ -52,6 +52,7 @@ class CreateUserBody {
             this.longitude = longitude
             this.latitude = latitude
         }
+
         var longitude: Double? = null
         var latitude: Double? = null
     }
@@ -113,7 +114,6 @@ class CreateUserBody {
                 (if (phone == null) createUserDto.phone == null else phone == createUserDto.phone) &&
                 if (source == null) createUserDto.source == null else source == createUserDto.source
     }
-
 
 
     override fun toString(): String {

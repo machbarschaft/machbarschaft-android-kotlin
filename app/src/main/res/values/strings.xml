@@ -1,12 +1,96 @@
-<resources>
-    <string name="app_name">Machbarschaft</string>
-    <string name="title_activity_login">LoginActivity</string>
-    <!-- Strings used for fragments for navigation -->
-    <string name="first_fragment_label">First Fragment</string>
-    <string name="second_fragment_label">Second Fragment</string>
-    <string name="next">Next</string>
-    <string name="previous">Previous</string>
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <string name="app_name">MACHBARSCHAFT</string>
+    <string name="app_name_noncapital">Machbarschaft</string>
+    <string name="title_back">Back</string>
 
-    <string name="hello_first_fragment">Hello first fragment</string>
-    <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
+    <string name="login_action_login">Start now</string>
+    <string name="login_hint_phone_number">Enter phone number</string>
+    <string name="login_error_invalid_phone_number">Please enter a valid phone number</string>
+    <string name="verify_phone_title">Confirm phone number</string>
+    <string name="verify_phone_btn_send_code">Resend code</string>
+    <string name="verify_phone_button">Verify</string>
+    <string name="verify_error_generic">Verification failed</string>
+    <string name="verify_error_sms_send_failed">SMS couldn\'t be send</string>
+
+    <string name="intro_1_text">Register as helper</string>
+    <string name="intro_2_text">Find people in your area to whom you can do good</string>
+    <string name="intro_3_text">Clear up the matter by phone</string>
+    <string name="intro_4_text">Run errands for people in need</string>
+
+    <string name="order_title_groceries">Purchase</string>
+    <string name="order_title_medicine">Medicine</string>
+    <string name="order_title_other">Other</string>
+    <string name="order_urgency_urgent">Urgent</string>
+    <string name="order_urgency_today">Today</string>
+    <string name="order_urgency_tomorrow">Tomorrow</string>
+    <string name="order_urgency_undefined">Sometime</string>
+
+    <string name="home_link_faq">FAQ</string>
+    <string name="home_link_contact">Contact</string>
+    <string name="home_link_bug_report">Report problem</string>
+    <string name="home_feedback_description">If you have a problem with our service, just send an email. We will take care of your request as soon as possible.</string>
+    <string name="home_feedback_write_mail">Send email</string>
+    <string name="home_feedback_later">Later</string>
+    <string name="home_feedback_subject">Problem in the Android App</string>
+    <string name="home_feedback_body1">Dear Machbarschaft team, I noticed a problem with the Android app. The technical information is as follows:</string>
+    <string name="home_feedback_body2" tools:ignore="TypographyEllipsis">My problem is ...</string>
+    <string name="home_tab_distance">Distance</string>
+    <string name="home_tab_urgency">Urgency</string>
+    <plurals name="home_order_count">
+        <item quantity="one">%1$d current order near you</item>
+        <item quantity="other">%1$d current orders near you</item>
+    </plurals>
+
+    <string name="home_order_distance_km">%1$.1f km</string>
+    <string name="home_order_extra_prescription">Get recipe</string>
+    <string name="home_order_extra_car">Car needed</string>
+
+    <string name="order_accept_title">Step #1</string>
+    <string name="order_accept_text">Please call %1$s to discuss the details of the order.</string>
+    <string name="call_now">Call now</string>
+
+    <string name="order_carry_out_title">Step #2</string>
+    <string name="order_carry_out_text">Tell us, when you are on your way.</string>
+    <string name="start_to_execute_now">Leaving now</string>
+    <string name="start_to_execute_later">I will go later</string>
+
+    <string name="order_done">Order completed</string>
+    <string name="thank_you_text">Thank you!\nYou are great!</string>
+    <string name="back_to_home">back to Home</string>
+
+    <string name="order_notification_title">Active Order</string>
+    <string name="order_notification_message">You are currently executing an order for %1$s The address is  %2$s</string>
+    <string name="notification_channel_current_order">Active Orders</string>
+    <string name="splash_describtion">Carry out telpehone enquiries \nshopping and errands \nfor older neighbours.</string>
+    <string name="order_first_title">Thank you, for offering your Help!</string>
+    <string name="order_first_text">One hint before you look at the first assignment: Via Machbarschaft real people are looking for your real help.
+        With this declaration of trust you voluntarily commit yourself to the confidential handling of personal information,
+        contact data and requests of people seeking help. Do you agree with this?</string>
+    <string name="order_first_accept_btn">Accept</string>
+    <string name="medical_warnings_not_checked">You need to confirm all warnings!</string>
+    <string name="button_cancel">Cancel</string>
+    <string name="button_report_problem">Report problem</string>
+    <string name="urgency_title">State: </string>
+    <string name="client_title">Client</string>
+    <string name="show_map">Show route</string>
+    <string name="needed_items">Needed goods</string>
+    <string name="button_accept_order">Accept order</string>
+    <string name="step_3_title">Step #3</string>
+    <string name="step_3_text">After handing over the goods, please confirm that the order is completed.</string>
+    <string name="report_problem">Report problem</string>
+
+    <!-- Medical Warnings -->
+    <string name="medical_warnings_title">Medical warnings</string>
+    <string name="medical_warnings_subtitle">Please confirm the following safety precautions</string>
+    <string name="medical_warnings_checkbox_1">You have not tested positive for COVID-19</string>
+    <string name="medical_warnings_checkox_2">You tested positive for COVID-19, but are medically proven to be no longer infectious</string>
+    <string name="medical_warnings_checkbox_3">You currently have no flu-like symptoms such as fever, shortness of breath or cough</string>
+    <string name="medical_warnings_checkbox_4">You have had no contact with positively tested persons or suspected cases in the last 3 weeks</string>
+    <string name="button_next">Next</string>
+    <string name="btn_report_problem">Report problem</string>
+    <string name="call_again">Call again</string>
+    <string name="back_button">Back</string>
+    <string name="report_problem_describtion">You can cancel the order or report a problem.</string>
+    <string name="image_desc_moving_person">Image of a person moving</string>
+    <string name="successfull_auth">Verification was successful!</string>
 </resources>

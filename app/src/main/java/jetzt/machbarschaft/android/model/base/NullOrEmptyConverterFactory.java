@@ -1,4 +1,4 @@
-package jetzt.machbarschaft.android.service.base;
+package jetzt.machbarschaft.android.model.base;
 
 import java.lang.annotation.Annotation;
 import java.lang.reflect.Type;

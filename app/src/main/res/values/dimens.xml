@@ -1,3 +1,22 @@
 <resources>
-    <dimen name="fab_margin">16dp</dimen>
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+
+    <dimen name="status_bar_height">40dp</dimen>
+    <dimen name="screen_padding">20dp</dimen>
+
+    <dimen name="button_height">56dp</dimen>
+
+    <dimen name="text_size_heading">26sp</dimen>
+    <dimen name="text_size_subheading">18sp</dimen>
+    <dimen name="text_size_default">14sp</dimen>
+
+    <dimen name="order_list_item_height">64dp</dimen>
+    <dimen name="home_controls_elevation">4dp</dimen>
+
+    <dimen name="space_between_content_areas">8dp</dimen>
+
+    <dimen name="order_content_size">300dp</dimen>
+    <dimen name="order_title_text_margin">16dp</dimen>
+    <dimen name="order_page_indicator_margin">16dp</dimen>
 </resources>

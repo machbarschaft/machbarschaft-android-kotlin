@@ -6,13 +6,13 @@ import io.reactivex.android.schedulers.AndroidSchedulers
 import io.reactivex.disposables.CompositeDisposable
 import io.reactivex.schedulers.Schedulers
 import jetzt.machbarschaft.android.BuildConfig
-import jetzt.machbarschaft.android.service.ApiConstants
-import jetzt.machbarschaft.android.service.base.NullOrEmptyConverterFactory
-import jetzt.machbarschaft.android.service.testapi.data.CreateUserBody
-import jetzt.machbarschaft.android.service.testapi.data.CreateUserResponse
-import jetzt.machbarschaft.android.service.testapi.data.GetUserResponse
-import jetzt.machbarschaft.android.service.testapi.datasource.UserDataApi
-import jetzt.machbarschaft.android.service.testapi.datasource.UserRemoteDataSource
+import jetzt.machbarschaft.android.model.ApiConstants
+import jetzt.machbarschaft.android.model.base.NullOrEmptyConverterFactory
+import jetzt.machbarschaft.android.model.testapi.data.CreateUserBody
+import jetzt.machbarschaft.android.model.testapi.data.CreateUserResponse
+import jetzt.machbarschaft.android.model.testapi.data.GetUserResponse
+import jetzt.machbarschaft.android.model.testapi.datasource.UserDataApi
+import jetzt.machbarschaft.android.model.testapi.datasource.UserRemoteDataSource
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
 import retrofit2.Retrofit
@@ -119,7 +119,7 @@ class SplashPresenter : SplashContract.Presenter {
      * callback if request is successful
      */
     private fun onGetUserSuccessful(response: GetUserResponse) {
-        Log.d("onGetUser","successful")
+        Log.d("onGetUser", "successful")
         view?.hideLoadingDialog()
         Log.wtf("GetUserResponse", response.toString())
     }
@@ -147,7 +147,7 @@ class SplashPresenter : SplashContract.Presenter {
      * callback if the registration request is successful
      */
     private fun onRequestRegistrationDataSuccessful(response: CreateUserResponse) {
-        Log.d("onRequestRegData","successful")
+        Log.d("onRequestRegData", "successful")
         view?.hideLoadingDialog()
         getUser(headerToken)
     }
@@ -161,17 +161,17 @@ class SplashPresenter : SplashContract.Presenter {
             if (task.isSuccessful) {
                 // In case the Authentication was successful it will set the Token in the Header for the Rest Calls which go directly to the Backend and not the Firebase Auth Service
                 setToken()
-            }else{
+            } else {
                 Log.wtf("Auth Firebase", "Failed")
             }
         }
     }
 
     override fun getUser() {
-        mAuth.currentUser!!.getIdToken(false).addOnCompleteListener{task ->
-            if(task.isSuccessful){
+        mAuth.currentUser!!.getIdToken(false).addOnCompleteListener { task ->
+            if (task.isSuccessful) {
                 task.result!!.token?.let { getUser(it) }
-            }else{
+            } else {
                 //need to auth maybe put email and password in a var
                 // and call authFirebase() here again in case something went wrong
                 Log.d("getUser", task.result.toString())
