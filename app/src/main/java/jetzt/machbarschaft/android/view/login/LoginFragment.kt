@@ -56,9 +56,11 @@ class LoginFragment : Fragment() {
 
         val countryCodes =
             resources.getStringArray(R.array.country_codes)
-        val countryCodeAdapter = context?.let {
+
+        //TODO needs to be fixed
+        /*val countryCodeAdapter = context?.let {
             ArrayAdapter(
-                it,
+                context!!,
                 R.layout.login_phone_dropdown_menu_popup_item,
                 countryCodes
             )
@@ -66,7 +68,7 @@ class LoginFragment : Fragment() {
         countryCodeTextView = filled_exposed_dropdown_country_code_login
         countryCodeTextView!!.setText(countryCodes[0], false)
         countryCodeTextView!!.setAdapter(countryCodeAdapter)
-
+*/
         // Fill in phone number if given
 
         // Fill in phone number if given

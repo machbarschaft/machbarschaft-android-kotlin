@@ -9,10 +9,10 @@ buildscript {
         constraintLayoutVersion = "1.1.3"
         materialDesignVersion = "1.2.0-beta01"
 
-        okHttpLoggingVersion = "3.12.5"
-        retrofitVersion = "2.4.0"
-        retrofitAdapterVersion = "2.6.2"
-        retrofitGsonVersion = "2.6.2"
+        okHttpLoggingVersion = "4.4.1"
+        retrofitVersion = "2.8.1"
+        retrofitAdapterVersion = "2.8.1"
+        retrofitGsonVersion = "2.8.1"
         rxAndroidVersion = "2.1.1"
 
         googlePlayServicesVersion = "17.0.0"
