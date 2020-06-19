@@ -5,7 +5,6 @@ import com.google.firebase.messaging.FirebaseMessagingService
 import com.google.firebase.messaging.RemoteMessage
 
 class MessagingService : FirebaseMessagingService() {
-
     private val LOG_TAG = "MessagingService"
 
     override fun onMessageReceived(remoteMessage: RemoteMessage) {
@@ -17,5 +16,4 @@ class MessagingService : FirebaseMessagingService() {
 
         // TODO send new token to server
     }
-
 }

@@ -76,8 +76,8 @@ task removeApiSrc(type: Delete) {
 
 task fixApiGradleWrapper {
     doLast {
-        def buildFile = project(":api").file('build.gradle');
-        def lines = buildFile.readLines();
+        def buildFile = project(":api").file('build.gradle')
+        def lines = buildFile.readLines()
         def inWrapperTask = false
         for (int i = 0; i < lines.size(); i++) {
             if (!inWrapperTask && lines.get(i).matches("wrapper \\{")) {

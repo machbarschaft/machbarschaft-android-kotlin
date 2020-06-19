@@ -1,4 +1,4 @@
-package jetzt.machbarschaft.android.service.testapi.data
+package jetzt.machbarschaft.android.model.testapi.data
 
 import android.os.Parcelable
 import com.google.gson.annotations.SerializedName
@@ -18,7 +18,7 @@ data class GetUserResponse(
     @Json(name = "locationGeoHash")
     val locationGeoHash: kotlin.String,
     @Json(name = "source")
-    val source: GetUserResponse.Source,
+    val source: Source,
     @Json(name = "zipCode")
     val zipCode: kotlin.String,
     @Json(name = "firstName")
@@ -35,6 +35,7 @@ data class GetUserResponse(
     enum class Source(val value: kotlin.String) {
         @Json(name = "HOTLINE")
         hOTLINE("HOTLINE"),
+
         @Json(name = "APP")
         aPP("APP");
     }
@@ -44,4 +45,4 @@ data class GetUserResponse(
 data class GeoPoint(
     @SerializedName("longitude") val longitude: Double?,
     @SerializedName("latitude") val latitude: Double?
-): Parcelable
+) : Parcelable

@@ -74,6 +74,7 @@
         <item name="buttonBarNeutralButtonStyle">@style/PositiveButtonStyle</item>
         <item name="buttonBarNegativeButtonStyle">@style/PositiveButtonStyle</item>
     </style>
+
     <style name="PositiveButtonStyle" parent="@style/Widget.MaterialComponents.Button">
         <!-- text color for the button -->
         <item name="android:textColor">@color/background_blue</item>

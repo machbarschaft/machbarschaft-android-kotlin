@@ -18,7 +18,7 @@ import com.google.firebase.auth.PhoneAuthProvider
 import com.google.firebase.auth.PhoneAuthProvider.ForceResendingToken
 import jetzt.machbarschaft.android.R
 
-class PhoneVerificationFragment : Fragment()  {
+class PhoneVerificationFragment : Fragment() {
 
     private val LOG_TAG = "VerifyPhoneActivity"
     private val EXTRA_PHONE_NUMBER = "phoneNumber"
@@ -28,11 +28,11 @@ class PhoneVerificationFragment : Fragment()  {
     private val mPhoneNumber: String? = null
     private val verificationInProgress = false
     private val btnSendCode: Button? = null
-    private val verificationCallbacks: VerificationCallbacks? =
-        null
+    private val verificationCallbacks: VerificationCallbacks? = null
 
     override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
+        inflater: LayoutInflater,
+        container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
@@ -78,8 +78,7 @@ class PhoneVerificationFragment : Fragment()  {
     }
 
     inner class VerificationCallbacks : PhoneAuthProvider.OnVerificationStateChangedCallbacks() {
-
-        private var mResendToken: PhoneAuthProvider.ForceResendingToken? = null
+        private var mResendToken: ForceResendingToken? = null
         private var mVerificationId: String? = null
 
         override fun onVerificationCompleted(phoneAuthCredential: PhoneAuthCredential) {
@@ -87,11 +86,7 @@ class PhoneVerificationFragment : Fragment()  {
         }
 
         override fun onVerificationFailed(exception: FirebaseException) {
-            Log.e(
-                LOG_TAG,
-                "Phone number verification failed",
-                exception
-            )
+            Log.e(LOG_TAG, "Phone number verification failed", exception)
 
             var errorText: Int = R.string.verify_error_generic
             if (exception is FirebaseTooManyRequestsException) {

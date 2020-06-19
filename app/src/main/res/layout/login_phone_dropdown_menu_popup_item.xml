@@ -5,4 +5,4 @@
     android:ellipsize="end"
     android:maxLines="1"
     android:textAppearance="?attr/textAppearanceHeadline1"
-    android:textSize="19sp"/>
+    android:textSize="19sp" />
