@@ -16,12 +16,14 @@ import jetzt.machbarschaft.android.util.PhoneNumberFormatterUtil
 import jetzt.machbarschaft.android.util.value
 import kotlinx.android.synthetic.main.fragment_login.*
 
-const val EXTRA_PHONE_NUMBER = "phoneNumber"
-
 /**
  * A simple [Fragment] subclass as the second destination in the navigation.
  */
 class LoginFragment : Fragment() {
+    companion object {
+        const val EXTRA_PHONE_NUMBER = "phoneNumber"
+    }
+
     private var phoneNumberTextView: EditText? = null
     private var loginButton: Button? = null
     private var countryCodeTextView: AutoCompleteTextView? = null
@@ -41,7 +43,7 @@ class LoginFragment : Fragment() {
         val introSlidesPager: ViewPager = intro_slides_pager
         val introSlidesIndicator: TabLayout = intro_slides_indicator
 
-        introSlidesPager.adapter = CustomPagerAdapter(requireActivity().supportFragmentManager)
+        introSlidesPager.adapter = IntroPagerAdapter(requireActivity().supportFragmentManager)
         introSlidesIndicator.setupWithViewPager(introSlidesPager, true)
 
         // Get UI elements
