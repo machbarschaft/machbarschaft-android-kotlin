@@ -18,7 +18,6 @@ import java.io.File
  * A simple [Fragment] subclass as the default destination in the navigation.
  */
 class SplashFragment : Fragment() {
-
     private val myHandler = Handler()
 
     override fun onCreateView(
