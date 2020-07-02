@@ -94,5 +94,7 @@
     <string name="report_problem_describtion">Du kannst den Auftrag abbrechen oder uns ein Problem melden.</string>
     <string name="image_desc_moving_person">Image of a person moving</string>
     <string name="successfull_auth">Verifizierung war erfolgreich!</string>
+    <string name="btn_request_help">Hilfe anfordern</string>
+    <string name="btn_help">Helfen</string>
 
 </resources>
