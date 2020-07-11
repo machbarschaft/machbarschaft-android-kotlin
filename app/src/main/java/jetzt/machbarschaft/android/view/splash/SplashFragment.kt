@@ -1,6 +1,7 @@
 package jetzt.machbarschaft.android.view.splash
 
 import android.content.Context
+import android.content.Intent
 import android.content.SharedPreferences
 import android.os.Bundle
 import android.os.Handler
@@ -12,6 +13,7 @@ import androidx.navigation.fragment.findNavController
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.FirebaseUser
 import jetzt.machbarschaft.android.R
+import jetzt.machbarschaft.android.view.activities.HomeActivity
 import java.io.File
 
 /**
@@ -52,7 +54,7 @@ class SplashFragment : Fragment() {
     }
 
     private fun startApp() {
-//        this.startActivity(Intent(this, HomeActivity::class.java))
+        startActivity(Intent(context, HomeActivity::class.java))
     }
 
     private fun startLogin() {
